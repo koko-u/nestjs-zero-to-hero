@@ -1,0 +1,36 @@
+### GET /tasks
+GET http://localhost:3333/api/tasks
+
+### Get filtered tasks
+GET http://localhost:3333/api/tasks?search=x&status=Done
+
+### Create task
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Task C",
+  "description": "Task Description C"
+}
+
+### Create Task (2)
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+  "foo": "Bar"
+}
+
+### Get Task by Id
+GET http://localhost:3333/api/tasks/00f10a43-4caf-45e6-b41d-ea63d8038736
+
+### Delete Task
+DELETE http://localhost:3333/api/tasks/00f10a43-4caf-45e6-b41d-ea63d8038736
+
+### Update Task
+PATCH http://localhost:3333/api/tasks/3566a162-50f1-46fb-8380-12cb9524dfd7/status
+Content-Type: application/json
+
+{
+  "status": "Done"
+}
